@@ -1,0 +1,6 @@
+dotnet new console -> cria um template de um projeto dotnet
+dotnet clean -> limpa os arquivos de compilação
+dotnet build -> compila o código e mostra os erros (mas não executa) 
+
+dotnet run -> compila e roda a aplicação
+dotnet watch -> fica observando o codigo, sempre que tem alteração compila e roda novamente
