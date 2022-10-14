@@ -55,63 +55,95 @@
 //     Console.WriteLine(number);
 // }
 
-int[] arr = new int[]
-{ 8, 4, 2, 3, 9, 12, 11, 1 };
+// void mergeSort(int[] arr){
+//     int e = arr.Length;
+//     int[] arraux = new int[e];
+//     mergeSortRec(arr, arraux, 0, e);
+// }
 
-mergeSort(arr);
+// void mergeSortRec(int[] arr, int[] arraux, int s, int e){
+//     if (e - s < 2) return;
 
-foreach (var x in arr[..^1]){
-    
-    Console.Write($"{x}, ");
-}
-Console.Write($"{arr[arr.Length - 1]}");
+//     int p = (s + e) / 2;
+//     mergeSortRec(arr, arraux, s, p);
+//     mergeSortRec(arr, arraux, p, e);
+//     merge(arr, arraux, s, p, e);
+// }
 
-void mergeSort(int[] arr){
-    int e = arr.Length;
-    int[] arraux = new int[e];
-    mergeSortRec(arr, arraux, 0, e);
-}
+// void merge(
+//     int[] arr,
+//     int[] arraux,
+//     int s, int p, int e)
+// {
+//     int i = s, j = p, k = s;
+//     while (i < p && j < e){
+//         if (arr[i] < arr[j]){
+//             arraux[k] = arr[i];
+//             i++;
+//             k++;
+//         } else {
+//             arraux[k] = arr[j];
+//             j++;
+//             k++;
+//         }
+//     }
 
-void mergeSortRec(int[] arr, int[] arraux, int s, int e){
-    if (e - s < 2) return;
+//     while (i < p){
+//         arraux[k] = arr[i];
+//         i++;
+//         k++;
+//     }
 
-    int p = (s + e) / 2;
-    mergeSortRec(arr, arraux, s, p);
-    mergeSortRec(arr, arraux, p, e);
-    merge(arr, arraux, s, p, e);
-}
+//     while (j < e){
+//         arraux[k] = arr[j];
+//         j++;
+//         k++;
+//     }
 
-void merge(
-    int[] arr,
-    int[] arraux,
-    int s, int p, int e)
-{
-    int i = s, j = p, k = s;
-    while (i < p && j < e){
-        if (arr[i] < arr[j]){
-            arraux[k] = arr[i];
-            i++;
-            k++;
-        } else {
-            arraux[k] = arr[j];
-            j++;
-            k++;
-        }
+//     for (int t = s; t < e; t++){
+//         arr[t] = arraux[t];
+//     }
+// }
+
+byte[]? compress(byte[] arr){
+    if(arr.Length % 2 != 0){
+        return null;
     }
 
-    while (i < p){
-        arraux[k] = arr[i];
-        i++;
-        k++;
+    byte[] compressedArr = new byte[arr.Length / 2];
+    for(int i = 0; i < arr.Length / 2; i++){
+        int bit1 = arr[i] >> 4;
+        int bit2 = arr[i+1] >> 4;
+        int compressedBit = (bit1 << 4) + bit2;
+        compressedArr[i] = (byte)compressedBit;
     }
 
-    while (j < e){
-        arraux[k] = arr[j];
-        j++;
-        k++;
-    }
-
-    for (int t = s; t < e; t++){
-        arr[t] = arraux[t];
-    }
+    return compressedArr;
 }
+
+byte[] decompress(byte[] arr){
+    byte[] decompressedArr = new byte[arr.Length * 2];
+
+    for(int i = 0; i < arr.Length; i++){
+        byte bit1 = (byte)((arr[i] >> 4) << 4);
+        byte bit2 = (byte)(arr[i] << 4);
+        decompressedArr[i] = bit1;
+        decompressedArr[i+1] = bit2;
+    }
+// 1 1 0 0 
+    return decompressedArr;
+}
+
+void compressAndDecompress(byte[] bytes){
+    var start = DateTime.Now;
+    var compressed = compress(bytes);
+
+    bytes = decompress(compressed);
+
+    var end = DateTime.Now;
+    Console.WriteLine($"Tempo total: {(end - start).TotalMilliseconds.ToString()} ms.");
+
+}
+
+byte[] arr = new byte[6220800];
+compressAndDecompress(arr);
