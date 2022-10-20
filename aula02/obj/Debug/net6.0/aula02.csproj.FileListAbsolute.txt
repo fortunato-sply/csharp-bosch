@@ -1,0 +1,15 @@
+\\bosch.com\dfsrb\DfsBR\loc\Ct\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\14 - Desenvolvimento de sistemas 2022\Lucas Fortunato\C#\aula02\bin\Debug\net6.0\aula02.exe
+\\bosch.com\dfsrb\DfsBR\loc\Ct\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\14 - Desenvolvimento de sistemas 2022\Lucas Fortunato\C#\aula02\bin\Debug\net6.0\aula02.deps.json
+\\bosch.com\dfsrb\DfsBR\loc\Ct\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\14 - Desenvolvimento de sistemas 2022\Lucas Fortunato\C#\aula02\bin\Debug\net6.0\aula02.runtimeconfig.json
+\\bosch.com\dfsrb\DfsBR\loc\Ct\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\14 - Desenvolvimento de sistemas 2022\Lucas Fortunato\C#\aula02\bin\Debug\net6.0\aula02.dll
+\\bosch.com\dfsrb\DfsBR\loc\Ct\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\14 - Desenvolvimento de sistemas 2022\Lucas Fortunato\C#\aula02\bin\Debug\net6.0\aula02.pdb
+\\bosch.com\dfsrb\DfsBR\loc\Ct\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\14 - Desenvolvimento de sistemas 2022\Lucas Fortunato\C#\aula02\obj\Debug\net6.0\aula02.csproj.AssemblyReference.cache
+\\bosch.com\dfsrb\DfsBR\loc\Ct\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\14 - Desenvolvimento de sistemas 2022\Lucas Fortunato\C#\aula02\obj\Debug\net6.0\aula02.GeneratedMSBuildEditorConfig.editorconfig
+\\bosch.com\dfsrb\DfsBR\loc\Ct\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\14 - Desenvolvimento de sistemas 2022\Lucas Fortunato\C#\aula02\obj\Debug\net6.0\aula02.AssemblyInfoInputs.cache
+\\bosch.com\dfsrb\DfsBR\loc\Ct\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\14 - Desenvolvimento de sistemas 2022\Lucas Fortunato\C#\aula02\obj\Debug\net6.0\aula02.AssemblyInfo.cs
+\\bosch.com\dfsrb\DfsBR\loc\Ct\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\14 - Desenvolvimento de sistemas 2022\Lucas Fortunato\C#\aula02\obj\Debug\net6.0\aula02.csproj.CoreCompileInputs.cache
+\\bosch.com\dfsrb\DfsBR\loc\Ct\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\14 - Desenvolvimento de sistemas 2022\Lucas Fortunato\C#\aula02\obj\Debug\net6.0\aula02.dll
+\\bosch.com\dfsrb\DfsBR\loc\Ct\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\14 - Desenvolvimento de sistemas 2022\Lucas Fortunato\C#\aula02\obj\Debug\net6.0\refint\aula02.dll
+\\bosch.com\dfsrb\DfsBR\loc\Ct\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\14 - Desenvolvimento de sistemas 2022\Lucas Fortunato\C#\aula02\obj\Debug\net6.0\aula02.pdb
+\\bosch.com\dfsrb\DfsBR\loc\Ct\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\14 - Desenvolvimento de sistemas 2022\Lucas Fortunato\C#\aula02\obj\Debug\net6.0\aula02.genruntimeconfig.cache
+\\bosch.com\dfsrb\DfsBR\loc\Ct\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\14 - Desenvolvimento de sistemas 2022\Lucas Fortunato\C#\aula02\obj\Debug\net6.0\ref\aula02.dll
