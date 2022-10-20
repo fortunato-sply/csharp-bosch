@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\14 - Desenvolvimento de sistemas 2022\\Lucas Fortunato\\C#\\aula04\\aula04.csproj",
+      "projectUniqueName": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\14 - Desenvolvimento de sistemas 2022\\Lucas Fortunato\\C#\\csharp-bosch\\aula04\\aula04.csproj",
       "projectName": "aula04",
-      "projectPath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\14 - Desenvolvimento de sistemas 2022\\Lucas Fortunato\\C#\\aula04\\aula04.csproj",
+      "projectPath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\14 - Desenvolvimento de sistemas 2022\\Lucas Fortunato\\C#\\csharp-bosch\\aula04\\aula04.csproj",
       "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-      "outputPath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\14 - Desenvolvimento de sistemas 2022\\Lucas Fortunato\\C#\\aula04\\obj\\",
+      "outputPath": "S:\\COM\\Human_Resources\\01.Engineering_Tech_School\\02.Internal\\10 - Aprendizes\\14 - Desenvolvimento de sistemas 2022\\Lucas Fortunato\\C#\\csharp-bosch\\aula04\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,9 +1,5 @@
-﻿IntList list = new IntList();
-list.Add(1);
-list.Add(4);
-list.Add(2);
+﻿ComplexNumber n1 = new ComplexNumber(4, 3);
+ComplexNumber n2 = new ComplexNumber(18, 20);
 
-foreach(var x in list)
-{
-    Console.WriteLine(x);
-}
+ComplexNumber sum = n1 + n2;
+Console.WriteLine(sum);
