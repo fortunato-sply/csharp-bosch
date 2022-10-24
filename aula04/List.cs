@@ -44,12 +44,12 @@ public class PlayerList : IEnumerable
     }
 }
 
-public class IntList : IEnumerable
+public class List<T> : IEnumerable
 {
-    private int[] values = new int[10];
+    private T[] values = new T[10];
     private int count = 0;
 
-    public int this[int index]
+    public T this[int index]
     {
         get 
         {
@@ -67,11 +67,11 @@ public class IntList : IEnumerable
 
     public int Count => count;
 
-    public void Add(int num)
+    public void Add(T num)
     {
         if (count == values.Length)
         {
-            int[] newValues = new int[2 * values.Length];
+            T[] newValues = new T[2 * values.Length];
             for (int i = 0; i < values.Length; i++)
                 newValues[i] = values[i];
             this.values = newValues;
@@ -83,20 +83,27 @@ public class IntList : IEnumerable
 
     public IEnumerator GetEnumerator()
     {
-        IntListIterator enumerator = new IntListIterator(this);
-        return enumerator;
+        ListIterator<T> it = new ListIterator<T>(this);
+        return it;
     }
 }
 
-public class IntListIterator : IEnumerator
+public class ListIterator<T> : IEnumerator<T>
 {
-    private IntList list;
+    private List<T> list;
     int index = -1;
-    public IntListIterator(IntList list)
+    public ListIterator(List<T> list)
     {
         this.list = list;
     }
-    public object Current => list[index];
+    public T Current => list[index];
+
+    object IEnumerator.Current => this.Current;
+
+    public void Dispose()
+    {
+        throw new NotImplementedException();
+    }
 
     public bool MoveNext()
     {
