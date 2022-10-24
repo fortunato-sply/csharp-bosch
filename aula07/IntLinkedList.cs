@@ -1,11 +1,11 @@
-public class IntLinkedList
+public class IntLinkedList<T>
 {
-    private Node first = null;
+    private Node<T> first = null;
     private int count = 0;
 
     public int Count => count;
 
-    public int this[int index]
+    public T this[int index]
     {
         get
         {
@@ -42,11 +42,11 @@ public class IntLinkedList
     }
 
 
-    public void Add(int value)
+    public void Add(T value)
     {
         if (first == null)
         {
-            first = new Node();
+            first = new Node<T>();
             first.Value = value;
             count++;
             return;
@@ -56,14 +56,14 @@ public class IntLinkedList
         while (crr.Next != null)
             crr = crr.Next;
         
-        crr.Next = new Node();
+        crr.Next = new Node<T>();
         crr.Next.Value = value;
         count++;
     }
 }
 
-public class Node
+public class Node<T>
 {
-    public int Value { get; set; }
-    public Node Next { get; set; }
+    public T Value { get; set; }
+    public Node<T> Next { get; set; }
 }

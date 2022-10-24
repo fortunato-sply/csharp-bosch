@@ -81,10 +81,15 @@ public class List<T> : IEnumerable
         count++;
     }
 
-    public IEnumerator GetEnumerator()
+    public IEnumerator<T> GetEnumerator()
     {
-        ListIterator<T> it = new ListIterator<T>(this);
-        return it;
+        for (int i = 0; i < Count; i++)
+            yield return values[i];
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        throw new NotImplementedException();
     }
 }
 
