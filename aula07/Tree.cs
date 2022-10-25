@@ -1,49 +1,70 @@
 public class Tree
 {
-    public int Value { get; set; }
-    public Tree Left { get; set; } = null;
-    public Tree Right { get; set; } = null;
+    public int? Value { get; set; } = null;
+    public Tree? Left { get; set; } = null;
+    public Tree? Right { get; set; } = null;
 
-    public void Add(int value)
+    public void Add(int value, Tree crr)
     {
-        Tree nt = new Tree();
-        nt.Value = value;
-        if (value >= Value)
+        if (crr.Value == null)
         {
-            if(Right != null)
-            {
-                Right = nt;
+            crr.Value = value;
+            return;
+        }
+           
+        Tree nt = new Tree();  
+        if (value >= crr.Value)
+        {
+            if(crr.Right == null)
+            {                    
+                crr.Right = nt;
             }
             else
             {
-                Console.WriteLine("Posição ocupada!");
-            } 
+                crr = crr.Right;
+            }
         }
         else
         {
-            if(Left != null)
+            if(crr.Left == null)
             {
-                Left = nt;
+                crr.Left = nt;
             }
             else
             {
-                Console.WriteLine("Posição ocupada!");
+                crr = crr.Left;
             }
         }
-            
-    }
+
+        Add(value, crr);
+    }          
 
     public void Show()
     {
         Console.WriteLine($"VALUE: {Value}");
         if (Right != null)
         {
-            Console.Write($"Esquerda: {Right.Value}");
+            Console.Write($"Direita: {Right.Value}");
         }
         if (Left != null)
         {
             Console.Write($"Esquerda: {Left.Value}");
         }      
+    }
+
+    public bool Contains(int value)
+    {
+        if (this.Value == value)
+            return true;
+        
+        if (value < this.Value)
+            if (this.Left != null)
+                return Left.Contains(value);
+            else return false;
+        else
+            if (this.Right != null)
+                return Right.Contains(value);
+            else return false;
     }
 
 }
