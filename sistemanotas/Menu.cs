@@ -8,6 +8,7 @@ public class Menu
         int choose = 0;
         while(true)
         {
+            Console.Clear();
             try
             {
                 Console.WriteLine(text);
@@ -32,7 +33,8 @@ public class Menu
                 int cargaHoraria = int.Parse(Console.ReadLine());
 
                 db.AddCurso(id, name, cargaHoraria);
-                Console.WriteLine("Adicionado com sucesso!");
+                Console.WriteLine("Adicionado com sucesso! Digite qualquer tecla para continuar.");
+                Console.ReadKey(true);
                 goto inicio;
             
             case 2:
@@ -48,7 +50,6 @@ public class Menu
                 Console.WriteLine("ID Curso: ");
                 int idCurso = int.Parse(Console.ReadLine());
 
-                Curso.AddAluno(idCurso, new Aluno(_id, _name, idCurso));
                 db.AddAluno(_id, _name, idCurso);
                 Console.WriteLine($"O aluno(a) {_name} foi adicionado com sucesso! Digite qualquer tecla para continuar.");
                 Console.ReadKey(true);

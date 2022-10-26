@@ -3,7 +3,7 @@ public class Aluno
     public int IdMatricula { get; set; }
     public string Name { get; set; }
     public int IdCurso { get; set; }    
-    public List<float> Notas { get; set; } = new List<float>[4];
+    public List<float> Notas { get; set; } = new List<float>();
 
     public Aluno (int idMatricula, string name, int idCurso)
     {
@@ -13,10 +13,10 @@ public class Aluno
     public void DarNotas()
     {
         int n = 1;
-        foreach (float nota in Notas)
+        for (int i = 0; i < 4; i++)
         {
             Console.WriteLine($"Nota {n}: ");
-            nota = float.Parse(Console.ReadLine());
+            this.Notas.Add(float.Parse(Console.ReadLine()));
             n++;
         }
     }
