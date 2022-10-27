@@ -1,15 +1,5 @@
 ﻿Console.Clear();
-Console.WriteLine(@"""$$\       $$\   $$\                         $$\                                                                               $$\                         
-$$ |      \__|  $$ |                        \__|                                                                              $$ |                        
-$$$$$$$\  $$\ $$$$$$\    $$$$$$$\  $$$$$$\  $$\ $$$$$$$\         $$$$$$\   $$$$$$\  $$$$$$$\   $$$$$$\   $$$$$$\   $$$$$$\  $$$$$$\    $$$$$$\   $$$$$$\  
-$$  __$$\ $$ |\_$$  _|  $$  _____|$$  __$$\ $$ |$$  __$$\       $$  __$$\ $$  __$$\ $$  __$$\ $$  __$$\ $$  __$$\  \____$$\ \_$$  _|  $$  __$$\ $$  __$$\ 
-$$ |  $$ |$$ |  $$ |    $$ /      $$ /  $$ |$$ |$$ |  $$ |      $$ /  $$ |$$$$$$$$ |$$ |  $$ |$$$$$$$$ |$$ |  \__| $$$$$$$ |  $$ |    $$ /  $$ |$$ |  \__|
-$$ |  $$ |$$ |  $$ |$$\ $$ |      $$ |  $$ |$$ |$$ |  $$ |      $$ |  $$ |$$   ____|$$ |  $$ |$$   ____|$$ |      $$  __$$ |  $$ |$$\ $$ |  $$ |$$ |      
-$$$$$$$  |$$ |  \$$$$  |\$$$$$$$\ \$$$$$$  |$$ |$$ |  $$ |      \$$$$$$$ |\$$$$$$$\ $$ |  $$ |\$$$$$$$\ $$ |      \$$$$$$$ |  \$$$$  |\$$$$$$  |$$ |      
-\_______/ \__|   \____/  \_______| \______/ \__|\__|  \__|       \____$$ | \_______|\__|  \__| \_______|\__|       \_______|   \____/  \______/ \__|      
-                                                                $$\   $$ |                                                                                
-                                                                \$$$$$$  |                                                                                
-                                                                 \______/                                                                                 """);
+Clicker.printGame();
 Console.WriteLine("Type anything to start the game.");
 Console.ReadKey(true);
 
@@ -18,16 +8,32 @@ char? x = null;
 while(x != 'x')
 {
     Console.Clear();
-    Console.WriteLine($"BTC {Clicker.Bitcoins} | Increments: {Clicker.Increment}");
+    Clicker.printGame();
+    Console.WriteLine($"US${Clicker.Bitcoins} | Increments: {Clicker.Increment}");
+    Console.WriteLine($"Type 1 to shop | Type 2 to view your GPUs | Type X to quit the game.");
     x = Console.ReadKey(true).KeyChar;
     if (x == '1')
     {
-        Store.ListStock();
-        int choice = int.Parse(Console.ReadLine());
-        Console.ReadKey(true);
-        Store.BuyGpu(choice);
-        Clicker.UpdateIncrement();
+        int choice;
+        while(true)
+        {
+            try
+            {
+                Store.ListStock();
+                choice = int.Parse(Console.ReadLine());
+                break;
+            }
+            catch
+            {
+                Console.WriteLine("Error: try again!");
+            }
+        }
+        int? incrementGpu = Store.BuyGpu(choice);
+        if (incrementGpu != null)
+            Clicker.UpdateIncrement(incrementGpu);
     }
+    else if (x == '2')
+        Clicker.PrintGpus();
     else
         Clicker.Click();
 }

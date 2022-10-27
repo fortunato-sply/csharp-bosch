@@ -25,7 +25,7 @@ public static class Store
         Console.WriteLine("Type the number of GPU: ");
     }
 
-    public static void BuyGpu(int position)
+    public static int? BuyGpu(int position)
     {
         try
         {
@@ -41,21 +41,25 @@ public static class Store
             Clicker.Bitcoins -= gpu.Price;
             Console.WriteLine($"{gpu.Name} was bougth successfull! Type anything to comeback.");
             Console.ReadKey(true);
+            return gpu.Increment;
         }
         catch (NoMoneyException)
         {
             Console.WriteLine("You don't have money to buy this GPU!\nType anything to comeback.");
             Console.ReadKey(true);
+            return null;
         }
         catch (NoStockException)
         {
             Console.WriteLine("Insufficient stock!");
             Console.ReadKey(true);
+            return null;
         }
         catch (Exception e)
         {
             Console.WriteLine(e.StackTrace);
             Console.ReadKey(true);
+            return null;
         }
     }
 }
